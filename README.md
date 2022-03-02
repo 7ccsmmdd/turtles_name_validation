@@ -1,39 +1,15 @@
-## An ETL transformation to fold sequences of move statements
+## A name validator for turtle programs
 
-Building on your ETL copy transformation, change the transformation so that it folds sequences of `MoveStatement`s into a single `MoveStatement`. So, for example:
+Write a simple validator for your turtle program language, that issues a warning for every variable declaration where the variable name starts with an upper case character.
 
-```
-forward(20)
-forward(10)
-```
-
-should become
+For example, 
 
 ```
-forward(20+10)
+var VarWithWrongName = 7
 ```
 
-Similarly, 
+should add a yellow wriggly line under the word `VarWithWrongName` with the warning message `Variable name should start with a lowercase character`.
 
-```
-forward(10+5)
-backward(9)
-```
+As always, you may have to generate xtext artifacts after your initial download of the code.
 
-should become
-
-```
-forward(10+5-9)
-```
-
-Remember that ETL makes transformations at the level of the *abstract* syntax. You will need to
- 
-1. Change the rule that transforms `MoveStatement`s so that it doesn't simply copy every `MoveStatement` but only the first in each sequence;
-2. Add code to collect the expressions from all `MoveStatement`s in a given sequence
-3. Create a new `Addition` expression that combines all of these expressions together
-
-Again, you will want to test your transformation in the runtime Eclipse. Eventually, save it in the file called `fold_moves.etl` in the `generator` package in the main `turtles` project so that the auto-grader can pick it up.
-
-The auto-grader has a test that checks the basic requirement and some tests that check for corner cases (for example, where the `MoveStatement` is the first or the last in a block of statements).
-
-Eventually, you should get 40/40 from the auto-grader.
+Eventually, you should get 10/10 from the auto-grader. When running the corresponding tests from Eclipse, you may find the Xpect feedback particularly helpful. In particular, when a test fails, you can double click on the first line of the stack trace to see a diff of the TurtleProgram text and warnings that the test was expecting and what was actually seen. This can make tracking down the source of a problem much easier.
