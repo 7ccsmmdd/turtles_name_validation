@@ -4,5 +4,5 @@ forward(10)
 forward(10)
 turn left by 360 degrees
 
-//  XPECT warnings --> "Variable name should start with a lowercase" at "VarWithWrongName" 
+//  XPECT warnings --> "Variable name should start with a lowercase character" at "VarWithWrongName" 
 var VarWithWrongName = 7
