@@ -82,7 +82,7 @@
                     "sourceButton": "generate-xtext",
 
                     "parameters": {
-                        "languageName": "uk.ac.kcl.inf.mdd8a.turtles.Turtles",
+                        "languageName": "uk.ac.kcl.inf.mdd8a.Turtles",
                         "baseName": "uk.ac.kcl.inf.mdd8a.turtles",
                         "extension": "turtles",
                         "grammar": "panel-xtext",
