@@ -123,11 +123,17 @@
                     "file": "example/test.turtles",
                     "extension": "turtles",
                     "buttons": []
+                },
+                {
+                    "id": "panel-console",
+                    "name": "Console",
+                    "ref": "console"
                 }
             ],
 
             "layout": {
-                "area": [["panel-turtles"]]
+                "area": [["panel-turtles"],
+                         ["panel-console"]]
             },
 
             "actions": []
