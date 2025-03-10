@@ -3,9 +3,9 @@
  */
 package uk.ac.kcl.inf.mdd8a.validation
 
+import org.eclipse.emf.common.util.EList
 import org.eclipse.xtext.validation.Check
-import uk.ac.kcl.inf.mdd8a.turtles.TurtlesPackage
-import uk.ac.kcl.inf.mdd8a.turtles.VariableDeclaration
+import uk.ac.kcl.inf.mdd8a.turtles.*
 
 /**
  * This class contains custom validation rules. 
@@ -14,13 +14,5 @@ import uk.ac.kcl.inf.mdd8a.turtles.VariableDeclaration
  */
 class TurtlesValidator extends AbstractTurtlesValidator {
 	
-	public static val INVALID_VARIABLE_NAME = 'uk.ac.kcl.inf.szschaler.turtles.INVALID_VARIABLE_NAME'
-	
-	@Check
-	def checkVariableNamesStartWithLowerCase(VariableDeclaration decl) {
-		if (!Character.isLowerCase(decl.name.charAt(0))) {
-			warning('Variable name should start with a lowercase character', decl,
-				TurtlesPackage.Literals.VARIABLE_DECLARATION__NAME, INVALID_VARIABLE_NAME)
-		}
-	}
+	// TODO: Add your validator code here...
 }

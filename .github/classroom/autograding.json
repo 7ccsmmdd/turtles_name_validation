@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Check variable names begin with lowercase",
+      "setup": "",
+      "run": "mvn -q -B -DfailIfNoTests=false -Dtest=NameValidatorTest verify",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
